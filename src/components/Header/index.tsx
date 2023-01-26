@@ -12,7 +12,10 @@ export function Header() {
             <NavigationItem>Stacks</NavigationItem>
             <NavigationItem>Projetos</NavigationItem>
           </div>
-          <NavigationMenu.Link href="https://www.linkedin.com/in/davi-marcilio-89a694240/">
+          <NavigationMenu.Link
+            target={"_blank"}
+            href="https://www.linkedin.com/in/davi-marcilio-89a694240/"
+          >
             <button className="bg-sky-700 px-6 py-2 rounded-md transition-colors hover:bg-sky-900 font-bold text-xl">
               Conectar
             </button>
