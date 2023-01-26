@@ -56,35 +56,6 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-zinc-800 rounded-3xl p-10  flex  w-full  gap-10">
-        {/* <div className="flex flex-col gap-10 flex-1">
-          <h1 data-aos="fade-up" className="text-3xl font-bold leading-10 ">
-            Um pouco da minha história
-          </h1>
-          <p className="pl-5">
-            Em 2018 eu tive meu primeiro contato com programação, fui tentar
-            criar um servidor de FiveM(Jogo online), tive um breve contato com
-            Lua e com MySQL, acabei não conseguindo criar o servidor e desisti.
-            <br />
-            Em 2021 eu fui para o ensino médio(integrado com curso técnico), e
-            advinha o curso que eu entrei, edificações HaHaHa engraçado né, após
-            6 meses estudando percebi que edificações não era para mim. <br />
-            Após isso decidi mudar de curso desta vez informática, no começo
-            achei que iria aprender Excel, PowerPoint, Word essas coisas. <br />
-            Na minha primeira aula do curso o professor estava passando Pascal,
-            ao ver uma logica simples do pascal me identifiquei, a partir dai eu
-            comecei a estudar bastante logica de programação. <br /> Só fui
-            avançar na area em 2022, quando o professor passou um trabalho
-            simples de conexão com o banco de dados pelo php, a partir dai
-            comecei a AMAR programação, no mesmo dia que eu terminei o trabalho
-            fui procurar linguagens WEB para aprender e me deparei com vários
-            cursos, após pesquisar sobre esses cursos escolhi fazer o curso de
-            Desenvolvimento Full-Stack ProgramadorBR. <br /> A partir dai eu não
-            parei mais, estudava 4 horas por dia, quando tinha feriado estudava
-            até 8 horas, hoje em dia eu já terminei o curso ProgramadorBR e
-            atualmente estou me especializando em React, React Native, NodeJs e
-            Elixir!
-          </p>
-        </div> */}
         <div className="flex-1">
           <section className=" dark:text-gray-100">
             <div className="container max-w-5xl px-4 py-12 mx-auto">
@@ -115,10 +86,10 @@ export default function Home() {
                         2018
                       </time>
                       <p className="mt-3">
-                        Em 2018 eu tive meu primeiro contato com programação,
-                        fui tentar criar um servidor de FiveM(Jogo online), tive
-                        um breve contato com Lua e com MySQL, acabei não
-                        conseguindo criar o servidor e desisti.
+                        meu primeiro contato com programação, foi tentando criar
+                        um servidor de FiveM(Jogo online), tive um breve contato
+                        com Lua e com MySQL, acabei não conseguindo criar o
+                        servidor e desisti.
                       </p>
                     </div>
                     <div
@@ -132,10 +103,9 @@ export default function Home() {
                         2021
                       </time>
                       <p className="mt-3">
-                        Em 2021 eu fui para o ensino médio(integrado com curso
-                        técnico), e advinha o curso que eu entrei, edificações
-                        HaHaHa engraçado né, após 6 meses estudando percebi que
-                        edificações não era para mim. <br />
+                        chegando no ensino médio(integrado com curso técnico),
+                        entrei no curso de edificações, após 6 meses estudando
+                        percebi que edificações não era para mim. <br />
                         Após isso decidi mudar de curso desta vez informática,
                         no começo achei que iria aprender Excel, PowerPoint,
                         Word essas coisas.
@@ -152,7 +122,7 @@ export default function Home() {
                         2021
                       </time>
                       <p className="mt-3">
-                        Na minha primeira aula do curso o professor estava
+                        Na primeira aula do curso técnico o professor estava
                         passando Pascal, ao ver uma logica simples do pascal me
                         identifiquei, a partir dai eu comecei a estudar bastante
                         logica de programação.
@@ -169,12 +139,12 @@ export default function Home() {
                         2022
                       </time>
                       <p className="mt-3">
-                        Só fui avançar na area em 2022, quando o professor
+                        Só fui me aprofundar na programação quando o professor
                         passou um trabalho simples de conexão com o banco de
                         dados pelo php, a partir dai comecei a AMAR programação,
                         no mesmo dia que eu terminei o trabalho fui procurar
                         linguagens WEB para aprender e me deparei com vários
-                        cursos,
+                        cursos.
                       </p>
                     </div>
                     <div
@@ -188,10 +158,11 @@ export default function Home() {
                         2022
                       </time>
                       <p className="mt-3">
-                        após pesquisar sobre esses cursos escolhi fazer o curso
-                        de Desenvolvimento Full-Stack ProgramadorBR. A partir
-                        dai eu não parei mais, estudava 4 horas por dia, quando
-                        tinha feriado estudava até 8 horas!
+                        Após pesquisar muito sobre cursos de desenvolvimento WEB
+                        escolhi um de Desenvolvimento Full-Stack da instituição
+                        ProgramadorBR. A partir dai eu não parei mais, estudava
+                        4 horas por dia, quando tinha feriado estudava até 8
+                        horas!
                       </p>
                     </div>
                     <div
@@ -216,6 +187,7 @@ export default function Home() {
           </section>
         </div>
       </section>
+      <section></section>
     </>
   );
 }
