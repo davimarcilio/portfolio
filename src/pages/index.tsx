@@ -7,6 +7,8 @@ import aos from "aos";
 import { StackCard } from "@/components/StackCard";
 import { Stacks } from "@/data/Stacks";
 import { At, Download, DownloadSimple, MapPin } from "phosphor-react";
+import { Projects } from "@/data/Projects";
+import { Header } from "@/components/Header";
 export default function Home() {
   useEffect(() => {
     aos.init({ duration: 2000 });
@@ -14,6 +16,8 @@ export default function Home() {
 
   return (
     <>
+      <Header />
+
       <section
         id="home"
         className={`flex w-full h-screen max-h-screen items-center justify-center`}
@@ -230,42 +234,24 @@ export default function Home() {
           className="w-full px-10 py-3 placeholder:text-xl flex items-center bg-transparent border text-gray-300 focus:outline-none transition-colors focus:border-sky-400 border-blue-800 rounded-lg"
         />
         <div className="grid grid-cols-3 justify-center items-center gap-10">
-          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
-            <Image
-              width={500}
-              height={500}
-              src={"/Screenshot_7.png"}
-              alt="Projeto"
-              className="group-hover:opacity-70 transition-all"
-            />
-            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
-              E-Commerce de cafés!
-            </h1>
-          </div>
-          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
-            <Image
-              width={500}
-              height={500}
-              src={"/Screenshot_7.png"}
-              alt="Projeto"
-              className="group-hover:opacity-70 transition-all"
-            />
-            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
-              E-Commerce de cafés!
-            </h1>
-          </div>
-          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
-            <Image
-              width={500}
-              height={500}
-              src={"/Screenshot_7.png"}
-              alt="Projeto"
-              className="group-hover:opacity-70 transition-all"
-            />
-            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
-              E-Commerce de cafés!
-            </h1>
-          </div>
+          {Projects.map((project) => (
+            <Link
+              key={project.id}
+              href={`/project/${project.id}`}
+              className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer"
+            >
+              <Image
+                width={500}
+                height={500}
+                src={project.imageUrl}
+                alt="Projeto"
+                className="group-hover:opacity-70 transition-all"
+              />
+              <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
+                {project.title}
+              </h1>
+            </Link>
+          ))}
         </div>
       </section>
     </>

@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <main
       className={`${inter.className} font-inter text-slate-50 container mx-auto px-5`}
     >
-      <Header />
       <Component {...pageProps} />
     </main>
   );
