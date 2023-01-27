@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Section } from "../components/Section";
 import "aos/dist/aos.css";
 import aos from "aos";
-
+import { StackCard } from "@/components/StackCard";
+import { Stacks } from "@/data/Stacks";
 export default function Home() {
   useEffect(() => {
     aos.init({ duration: 2000 });
@@ -187,7 +187,18 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section></section>
+      <section className="flex w-full h-screen max-h-screen p-10 relative justify-center items-center">
+        <h1 className="text-3xl font-bold absolute left-5 top-5">Stacks</h1>
+        <div className="grid grid-cols-4 gap-20 m-5">
+          {Stacks.map((stack) => (
+            <StackCard
+              description={stack.description}
+              src={stack.src}
+              alt={stack.alt}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 }
