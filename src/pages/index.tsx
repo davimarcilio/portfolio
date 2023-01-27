@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import aos from "aos";
 import { StackCard } from "@/components/StackCard";
 import { Stacks } from "@/data/Stacks";
+import { At, Download, DownloadSimple, MapPin } from "phosphor-react";
 export default function Home() {
   useEffect(() => {
     aos.init({ duration: 2000 });
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <section
+        id="home"
         className={`flex w-full h-screen max-h-screen items-center justify-center`}
       >
         <div data-aos="fade-right" className="flex justify-end mr-10">
@@ -30,7 +32,7 @@ export default function Home() {
             Olá eu sou{" "}
             <TypeAnimation
               sequence={[
-                1500,
+                2500,
                 "Desenvolvedor Front-End",
                 2000,
                 "Desenvolvedor Back-End",
@@ -46,12 +48,25 @@ export default function Home() {
             />
           </h1>
           <Link
+            data-aos="fade-left"
+            className="flex items-center gap-2"
+            href={"mailto:davimarcilio.js@gmail.com"}
+          >
+            <At size={24} weight="fill" />
+            davimarcilio.js@gmail.com
+          </Link>
+          <span data-aos="fade-left" className="flex items-center gap-2">
+            <MapPin size={24} weight="fill" />
+            Criciúma, Santa Catarina
+          </span>
+          <Link
             data-aos="fade-up"
             href={
               "https://cdn.discordapp.com/attachments/468214793199943690/1068253859446796459/Curr_C3_ADculoDaviMarcilio.pdf"
             }
-            className="bg-sky-700 px-6 py-2 rounded-md transition-colors hover:bg-sky-900 font-bold text-xl w-fit"
+            className="bg-sky-700 px-6 py-2 rounded-md transition-colors hover:bg-sky-900 font-bold text-xl w-fit flex items-center gap-2"
           >
+            <DownloadSimple weight="fill" size={22} />
             Baixar CV
           </Link>
         </div>
@@ -208,7 +223,51 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className=""></section>
+      <section className="flex flex-col w-full justify-center gap-10 items-center p-10 mt-10">
+        <input
+          type="text"
+          placeholder="Pesquise um projeto!"
+          className="w-full px-10 py-3 placeholder:text-xl flex items-center bg-transparent border text-gray-300 focus:outline-none transition-colors focus:border-sky-400 border-blue-800 rounded-lg"
+        />
+        <div className="grid grid-cols-3 justify-center items-center gap-10">
+          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
+            <Image
+              width={500}
+              height={500}
+              src={"/Screenshot_7.png"}
+              alt="Projeto"
+              className="group-hover:opacity-70 transition-all"
+            />
+            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
+              E-Commerce de cafés!
+            </h1>
+          </div>
+          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
+            <Image
+              width={500}
+              height={500}
+              src={"/Screenshot_7.png"}
+              alt="Projeto"
+              className="group-hover:opacity-70 transition-all"
+            />
+            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
+              E-Commerce de cafés!
+            </h1>
+          </div>
+          <div className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer">
+            <Image
+              width={500}
+              height={500}
+              src={"/Screenshot_7.png"}
+              alt="Projeto"
+              className="group-hover:opacity-70 transition-all"
+            />
+            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
+              E-Commerce de cafés!
+            </h1>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

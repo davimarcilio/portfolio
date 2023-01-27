@@ -11,7 +11,7 @@ export function Header() {
         <NavigationMenu.List className="flex w-full gap-5 px-10 py-5 justify-between items-center">
           <div className="flex gap-5 items-center">
             <NavigationItem>Logo</NavigationItem>
-            <NavigationItem>Home</NavigationItem>
+            <NavigationItem href="#home">Home</NavigationItem>
             <NavigationItem href="#stacks">Stacks</NavigationItem>
             <NavigationItem>Projetos</NavigationItem>
           </div>
