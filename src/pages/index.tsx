@@ -16,7 +16,7 @@ export default function Home() {
       <section
         className={`flex w-full h-screen max-h-screen items-center justify-center`}
       >
-        <div className="flex justify-end mr-10">
+        <div data-aos="fade-right" className="flex justify-end mr-10">
           <Image
             className="rounded-xl ring-4 ring-offset-4 ring-offset-stone-900"
             width={250}
@@ -26,7 +26,7 @@ export default function Home() {
           />
         </div>
         <div className="max-w-md w-full flex flex-col gap-5">
-          <h1 className="text-2xl font-bold ">
+          <h1 className="text-2xl font-bold" data-aos="fade-down">
             Olá eu sou{" "}
             <TypeAnimation
               sequence={[
@@ -46,6 +46,7 @@ export default function Home() {
             />
           </h1>
           <Link
+            data-aos="fade-up"
             href={
               "https://cdn.discordapp.com/attachments/468214793199943690/1068253859446796459/Curr_C3_ADculoDaviMarcilio.pdf"
             }
@@ -187,8 +188,16 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section className="flex w-full h-screen max-h-screen p-10 relative justify-center items-center">
-        <h1 className="text-3xl font-bold absolute left-5 top-5">Stacks</h1>
+      <section
+        id="stacks"
+        className="flex w-full h-screen max-h-screen p-10 mt-52 relative justify-center before:content-[''] before:h-full before:bg-sky-800 before:w-1 before:-translate-x-64  items-center rounded-full"
+      >
+        <h1
+          data-aos="fade-down"
+          className="text-5xl font-bold absolute top-20 "
+        >
+          Stacks
+        </h1>
         <div className="grid grid-cols-4 gap-20 m-5">
           {Stacks.map((stack) => (
             <StackCard
@@ -199,6 +208,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className=""></section>
     </>
   );
 }
