@@ -39,12 +39,8 @@ export default function Project({
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
       <p className="text-xl">{description}</p>
-      <p>
-        Teste o projeto: <Link href={deployUrl}>Link</Link>
-      </p>
-      <p>
-        Repositório: <Link href={repoUrl}>Link</Link>
-      </p>
+      <Link href={deployUrl}>Teste o projeto</Link>
+      <Link href={repoUrl}>Repositório</Link>
     </div>
   );
 }
