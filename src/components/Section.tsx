@@ -29,9 +29,9 @@ export function ProjectsSection() {
 
   useEffect(() => {
     if (search.length > 0) {
-      const regex = new RegExp(`${search}`, `mg`);
+      const regex = new RegExp(`${search.toLowerCase()}`, `mg`);
       return setProjectsFiltered(
-        Projects.filter((project) => project.title.match(regex))
+        Projects.filter((project) => project.title.toLowerCase().match(regex))
       );
     }
     return setProjectsFiltered(Projects);
