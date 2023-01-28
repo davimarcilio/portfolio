@@ -208,17 +208,15 @@ export default function Home() {
           </section>
         </div>
       </section>
+
       <section
         id="stacks"
-        className="flex w-full h-screen max-h-screen p-10 mt-52 relative justify-center before:content-[''] before:h-full before:bg-sky-800 before:w-1 before:-translate-x-64  items-center rounded-full"
+        className="flex flex-col gap-10 w-full h-screen max-h-screen p-10 mt-52 relative justify-center  before:content-[''] before:-top-10 before:absolute before:w-full before:bg-sky-800 before:h-1  items-center rounded-full"
       >
-        <h1
-          data-aos="fade-down"
-          className="text-5xl font-bold absolute top-20 "
-        >
+        <h1 data-aos="fade-down" className="text-5xl font-bold ">
           Stacks
         </h1>
-        <div className="grid grid-cols-4 gap-20 m-5">
+        <div className="grid grid-cols-4 gap-20 m-5 ">
           {Stacks.map((stack) => (
             <StackCard
               description={stack.description}
