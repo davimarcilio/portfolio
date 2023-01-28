@@ -4,6 +4,7 @@ export const Projects = [
     title: "E-Commerce de cafés",
     description: "Desafio da rocketseat",
     mediaUrl: "",
+    isMedia: false,
     imageUrl: "/Screenshot_7.png",
     repoUrl: "https://github.com/davimarcilio/CoffeeDelivery",
     deployUrl: "davimarcilio.github.io/CoffeeDelivery/",
