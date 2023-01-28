@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ArrowBendUpLeft } from "phosphor-react";
+import { ArrowBendUpLeft, GithubLogo, Monitor } from "phosphor-react";
 
 interface ProjectProps {
   title: string;
@@ -57,15 +57,17 @@ export default function Project({
       <p className="text-xl">{description}</p>
       <div className="flex gap-5">
         <Link
-          className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md"
+          className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
           href={deployUrl}
         >
+          <Monitor weight="bold" size={24} />
           Teste o projeto
         </Link>
         <Link
-          className="bg-blue-700 hover:bg-blue-800 transition-colors px-10 py-3 font-bold text-xl rounded-md"
+          className="bg-blue-700 hover:bg-blue-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
           href={repoUrl}
         >
+          <GithubLogo weight="bold" size={24} />
           Repositório
         </Link>
       </div>
