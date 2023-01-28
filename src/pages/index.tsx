@@ -233,10 +233,16 @@ export default function Home() {
       </section>
       <section className="flex flex-col w-full bg-neutral-900 rounded-sm py-20 gap-10">
         <div className="flex w-full justify-between items-center">
-          <h1 className="flex-1 flex justify-center text-3xl font-bold">
+          <h1
+            data-aos="fade-down"
+            className="flex-1 flex justify-center text-3xl font-bold"
+          >
             Educação
           </h1>
-          <h2 className="flex-1 flex justify-center text-3xl font-bold">
+          <h2
+            data-aos="fade-down"
+            className="flex-1 flex justify-center text-3xl font-bold"
+          >
             Experiências Profissionais
           </h2>
         </div>
@@ -280,10 +286,14 @@ export default function Home() {
           {/* Educação */}
 
           <div className="flex-1 flex flex-col gap-5 justify-center items-center ">
-            <h1 className="text-2xl font-bold text-zinc-300">
+            <h1
+              data-aos="fade-down"
+              className="text-2xl font-bold text-zinc-300"
+            >
               Procurando vagas
             </h1>
             <Lottie
+              data-aos="fade-left"
               className="w-8/12  relative bg-blue-600 rounded-3xl after:rounded-3xl after:content-[''] after:absolute after:top-0 after:w-20 after:right-0 after:h-full after:bg-blue-600 before:content-[''] before:rounded-3xl before:absolute before:top-0 before:z-10 before:w-20 before:left-0 before:h-full before:bg-blue-600"
               animationData={searchJob}
             />

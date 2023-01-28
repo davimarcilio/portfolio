@@ -12,7 +12,10 @@ export function EducationCard({
   title,
 }: EducationCardProps) {
   return (
-    <div className="flex flex-col gap-3 w-8/12 border-4 transition-colors group hover:border-blue-900  border-blue-600 rounded-md px-5 py-6">
+    <div
+      data-aos="fade-right"
+      className="flex flex-col gap-3 w-8/12 border-4 transition-colors group hover:border-blue-900  border-blue-600 rounded-md px-5 py-6"
+    >
       <div className="flex justify-between items-center gap-5">
         <h1 className="font-bold text-xl"> {title} </h1>
         <time className="text-zinc-400 text-xs font-bold">{time}</time>
