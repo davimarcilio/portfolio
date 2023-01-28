@@ -12,6 +12,7 @@ import { ProjectsSection } from "@/components/Section";
 import { EducationCard } from "@/components/EducationCard";
 import Lottie from "lottie-react";
 import searchJob from "../anim/searchJob.json";
+import { Footer } from "@/components/Footer";
 export default function Home() {
   useEffect(() => {
     aos.init({ duration: 2000 });
@@ -301,6 +302,8 @@ export default function Home() {
         </div>
       </section>
       <ProjectsSection />
+
+      <Footer />
     </>
   );
 }
