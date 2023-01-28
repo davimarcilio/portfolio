@@ -6,10 +6,12 @@ import "aos/dist/aos.css";
 import aos from "aos";
 import { StackCard } from "@/components/StackCard";
 import { Stacks } from "@/data/Stacks";
-import { At, Download, DownloadSimple, MapPin } from "phosphor-react";
-import { Projects } from "@/data/Projects";
+import { At, DownloadSimple, MapPin } from "phosphor-react";
 import { Header } from "@/components/Header";
 import { ProjectsSection } from "@/components/Section";
+import { EducationCard } from "@/components/EducationCard";
+import Lottie from "lottie-react";
+import searchJob from "../anim/searchJob.json";
 export default function Home() {
   useEffect(() => {
     aos.init({ duration: 2000 });
@@ -76,7 +78,10 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="bg-zinc-800 rounded-3xl p-10  flex  w-full  gap-10">
+      <section
+        id="about"
+        className="bg-zinc-800 rounded-3xl p-10  flex  w-full  gap-10"
+      >
         <div className="flex-1">
           <section className=" dark:text-gray-100">
             <div className="container max-w-5xl px-4 py-12 mx-auto">
@@ -224,6 +229,65 @@ export default function Home() {
               alt={stack.alt}
             />
           ))}
+        </div>
+      </section>
+      <section className="flex flex-col w-full bg-neutral-900 rounded-sm py-20 gap-10">
+        <div className="flex w-full justify-between items-center">
+          <h1 className="flex-1 flex justify-center text-3xl font-bold">
+            Educação
+          </h1>
+          <h2 className="flex-1 flex justify-center text-3xl font-bold">
+            Experiências Profissionais
+          </h2>
+        </div>
+        <div className="flex w-full justify-between items-center">
+          {/* Educação */}
+
+          <div className="flex-1 flex flex-col justify-center items-center gap-5">
+            <EducationCard
+              title="Curso Técnico"
+              time={"2021 - 2023"}
+              company="CEDUP Ábilio Paulo"
+              description="Lógica de Programação, Modelagem de Sistemas, Programação de
+              Aplicativos, Implantação e Manutenção de Sistemas, Teste de
+              Software."
+            />
+
+            <EducationCard
+              title="Curso Desenvolvimento WEB Full-Stack"
+              time={"2022"}
+              company="ProgramadorBR"
+              description="HTML, CSS, Javascript, Firebase, jQuery, Bootstrap, NodeJS,
+              MongoDB, ReactJS e Electron."
+            />
+
+            <EducationCard
+              title="Especialização"
+              time={"2023"}
+              company="Rocketseat"
+              description="React, React Native, NodeJs, Elixir, TypeScript"
+            />
+
+            <EducationCard
+              company="YouTube/Fóruns"
+              description="Git, GitHub, GitHub para times, RegEx, CleanCode, etc..."
+              time="2021 - Inf"
+              title="Outros"
+              key={89231}
+            />
+          </div>
+
+          {/* Educação */}
+
+          <div className="flex-1 flex flex-col gap-5 justify-center items-center ">
+            <h1 className="text-2xl font-bold text-zinc-300">
+              Procurando vagas
+            </h1>
+            <Lottie
+              className="w-8/12  relative bg-blue-600 rounded-3xl after:rounded-3xl after:content-[''] after:absolute after:top-0 after:w-20 after:right-0 after:h-full after:bg-blue-600 before:content-[''] before:rounded-3xl before:absolute before:top-0 before:z-10 before:w-20 before:left-0 before:h-full before:bg-blue-600"
+              animationData={searchJob}
+            />
+          </div>
         </div>
       </section>
       <ProjectsSection />

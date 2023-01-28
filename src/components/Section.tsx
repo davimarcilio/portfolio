@@ -38,7 +38,10 @@ export function ProjectsSection() {
   }, [search]);
 
   return (
-    <section className="flex flex-col w-full justify-center gap-10 items-center p-10 mt-10 transition-all">
+    <section
+      id="projects"
+      className="flex flex-col w-full justify-center gap-10 items-center p-10 mt-10 transition-all"
+    >
       <input
         data-aos="fade-down"
         onChange={handleSearchProjects}
