@@ -217,7 +217,7 @@ export default function Home() {
 
       <section
         id="stacks"
-        className="flex flex-col gap-10 w-full h-screen max-h-screen p-10 mt-52 relative justify-center  before:content-[''] before:-top-10 before:absolute before:w-full before:bg-sky-800 before:h-1  items-center rounded-full"
+        className="flex flex-col gap-10 w-full h-screen max-h-screen p-10 my-52 relative justify-center  before:content-[''] before:-top-10 before:absolute before:w-full before:bg-sky-800 before:h-1  items-center rounded-full"
       >
         <h1 data-aos="fade-down" className="text-5xl font-bold ">
           Stacks
@@ -232,7 +232,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col w-full bg-neutral-900 rounded-sm py-20 gap-10">
+      <section
+        id="experience"
+        className="flex flex-col w-full bg-neutral-900 rounded-sm py-20 gap-10"
+      >
         <div className="flex w-full justify-between items-center">
           <h1
             data-aos="fade-down"
