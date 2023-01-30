@@ -12,7 +12,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://uploaddeimagens.com.br/imagens/rVD38UY"
+          content="https://uploaddeimagens.com.br/imagens/LNyMsEA"
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
