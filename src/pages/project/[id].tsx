@@ -56,13 +56,16 @@ export default function Project({
 
       <p className="text-xl">{description}</p>
       <div className="flex gap-5">
-        <Link
-          className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
-          href={deployUrl}
-        >
-          <Monitor weight="bold" size={24} />
-          Teste o projeto
-        </Link>
+        {deployUrl && (
+          <Link
+            className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
+            href={deployUrl}
+          >
+            <Monitor weight="bold" size={24} />
+            Teste o projeto
+          </Link>
+        )}
+
         <Link
           className="bg-blue-700 hover:bg-blue-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
           href={repoUrl}
@@ -90,7 +93,7 @@ export const getServerSideProps: GetServerSideProps<
       description: project.description,
       imageUrl: project.imageUrl,
       mediaUrl: project.mediaUrl,
-      deployUrl: project.deployUrl,
+      deployUrl: project.deployUrl || "",
       repoUrl: project.repoUrl,
     },
   };

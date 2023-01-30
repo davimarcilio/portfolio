@@ -1,6 +1,7 @@
 import { Projects } from "@/data/Projects";
 import Image from "next/image";
 import Link from "next/link";
+import { Plus } from "phosphor-react";
 import { ChangeEvent, useEffect, useState } from "react";
 
 // interface SectionProps {
@@ -70,6 +71,18 @@ export function ProjectsSection() {
             </h1>
           </Link>
         ))}
+        <Link
+          target={"_blank"}
+          data-aos="fade-up"
+          key={"more"}
+          href={`https://github.com/davimarcilio?tab=repositories`}
+          className="bg-neutral-800 p-5 group hover:bg-neutral-900 rounded-lg transition-all flex justify-center flex-col items-center cursor-pointer "
+        >
+          <Plus size={100} className="w-96 h-56" />
+          <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
+            Mais
+          </h1>
+        </Link>
       </div>
     </section>
   );
