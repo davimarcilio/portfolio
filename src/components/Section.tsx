@@ -63,7 +63,7 @@ export function ProjectsSection() {
               height={500}
               src={project.imageUrl}
               alt="Projeto"
-              className="group-hover:opacity-70 transition-all object-fill"
+              className="group-hover:opacity-70 w-96 h-56 transition-all  "
             />
             <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
               {project.title}

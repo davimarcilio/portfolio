@@ -5,7 +5,7 @@ export const Projects = [
     description: "Desafio da rocketseat",
     mediaUrl: "",
     isMedia: false,
-    imageUrl: "/CoffeDelivery.png",
+    imageUrl: "/coffeDelivery.gif",
     repoUrl: "https://github.com/davimarcilio/CoffeeDelivery",
     deployUrl: "davimarcilio.github.io/CoffeeDelivery/",
   },
