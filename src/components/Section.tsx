@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Plus } from "phosphor-react";
 import { ChangeEvent, useEffect, useState } from "react";
+import { TechSlider } from "./TechSlider";
 
 // interface SectionProps {
 //   children: ReactNode;
@@ -57,7 +58,7 @@ export function ProjectsSection() {
             data-aos="fade-up"
             key={project.id}
             href={`/project/${project.id}`}
-            className="bg-neutral-800 inline-block p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer"
+            className="bg-neutral-800 flex flex-col p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer"
           >
             <Image
               width={500}
@@ -66,6 +67,7 @@ export function ProjectsSection() {
               alt="Projeto"
               className="group-hover:opacity-70 w-96 h-56 transition-all  "
             />
+            <TechSlider />
             <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
               {project.title}
             </h1>
