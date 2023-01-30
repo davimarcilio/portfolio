@@ -24,9 +24,12 @@ export default function Home() {
 
       <section
         id="home"
-        className={`flex w-full h-screen max-h-screen items-center justify-center`}
+        className={`flex w-full h-screen max-h-screen max-sm:flex-col max-sm:gap-5 items-center justify-center`}
       >
-        <div data-aos="fade-right" className="flex justify-end mr-10">
+        <div
+          data-aos="fade-right"
+          className="flex justify-end max-sm:justify-center max-sm:items-center max-sm:mr-0 mr-10"
+        >
           <Image
             className="rounded-xl ring-4 ring-offset-4 ring-offset-stone-900"
             width={250}
@@ -35,7 +38,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="max-w-md w-full flex flex-col gap-5">
+        <div className="max-w-md w-full max-sm:text-center max-sm:items-center flex flex-col gap-5">
           <h1 className="text-2xl font-bold" data-aos="fade-down">
             Olá eu sou{" "}
             <TypeAnimation
@@ -86,7 +89,7 @@ export default function Home() {
         <div className="flex-1">
           <section className=" dark:text-gray-100">
             <div className="container max-w-5xl px-4 py-12 mx-auto">
-              <div className="grid gap-4 mx-4 sm:grid-cols-12">
+              <div className="grid gap-4 mx-4 max-sm:mx-0 sm:grid-cols-12">
                 <div
                   data-aos="fade-right"
                   className="col-span-12 sm:col-span-3"
@@ -100,7 +103,7 @@ export default function Home() {
                     </span> */}
                   </div>
                 </div>
-                <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                <div className="relative col-span-12 max-sm:px-0 px-4 space-y-6 sm:col-span-9">
                   <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
                     <div
                       data-aos="fade-up"
@@ -222,7 +225,7 @@ export default function Home() {
         <h1 data-aos="fade-down" className="text-5xl font-bold ">
           Stacks
         </h1>
-        <div className="grid grid-cols-4 gap-20 m-5 ">
+        <div className="grid grid-cols-4 max-sm:grid-cols-2 max-sm:gap-10 gap-20 m-5 ">
           {Stacks.map((stack) => (
             <StackCard
               description={stack.description}
@@ -236,7 +239,7 @@ export default function Home() {
         id="experience"
         className="flex flex-col w-full bg-neutral-900 rounded-sm py-20 gap-10"
       >
-        <div className="flex w-full justify-between items-center">
+        <div className="flex w-full justify-between items-center max-sm:hidden">
           <h1
             data-aos="fade-down"
             className="flex-1 flex justify-center text-3xl font-bold"
@@ -250,10 +253,16 @@ export default function Home() {
             Experiências Profissionais
           </h2>
         </div>
-        <div className="flex w-full justify-between items-center">
+        <div className="flex w-full max-sm:flex-col justify-between items-center">
           {/* Educação */}
 
-          <div className="flex-1 flex flex-col justify-center items-center gap-5">
+          <div className="flex-1 max-sm:px-5 flex flex-col justify-center items-center gap-5">
+            <h1
+              data-aos="fade-down"
+              className="hidden max-sm:flex justify-center text-3xl font-bold"
+            >
+              Educação
+            </h1>
             <EducationCard
               title="Curso Técnico"
               time={"2021 - 2023"}
@@ -289,7 +298,13 @@ export default function Home() {
 
           {/* Educação */}
 
-          <div className="flex-1 flex flex-col gap-5 justify-center items-center ">
+          <div className="flex-1 max-sm:mt-5 flex flex-col gap-5 justify-center items-center ">
+            <h2
+              data-aos="fade-down"
+              className="flex-col hidden max-sm:flex justify-center items-center text-3xl font-bold"
+            >
+              Experiências
+            </h2>
             <h1
               data-aos="fade-down"
               className="text-2xl font-bold text-zinc-300"
@@ -297,7 +312,7 @@ export default function Home() {
               Procurando vagas
             </h1>
             <Lottie
-              data-aos="fade-left"
+              data-aos="fade-down"
               className="w-8/12  relative bg-blue-600 rounded-3xl after:rounded-3xl after:content-[''] after:absolute after:top-0 after:w-20 after:right-0 after:h-full after:bg-blue-600 before:content-[''] before:rounded-3xl before:absolute before:top-0 before:z-10 before:w-20 before:left-0 before:h-full before:bg-blue-600"
               animationData={searchJob}
             />

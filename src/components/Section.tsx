@@ -40,7 +40,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="flex flex-col w-full justify-center gap-10 items-center p-10 mt-10 transition-all"
+      className="flex flex-col w-full justify-center gap-10 items-center max-sm:px-0 p-10 mt-10 transition-all"
     >
       <input
         data-aos="fade-down"
@@ -50,7 +50,7 @@ export function ProjectsSection() {
         placeholder="Pesquise um projeto!"
         className="w-full px-10 py-3 placeholder:text-xl flex items-center bg-transparent border text-gray-300 focus:outline-none transition-colors focus:border-sky-400 border-blue-800 rounded-lg"
       />
-      <div className="grid grid-cols-3 justify-center items-center gap-10">
+      <div className="grid grid-cols-3 max-sm:grid-cols-1 justify-center items-center gap-10">
         {ProjectsFiltered.map((project) => (
           <Link
             data-aos="fade-up"

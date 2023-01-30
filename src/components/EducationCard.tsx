@@ -14,7 +14,7 @@ export function EducationCard({
   return (
     <div
       data-aos="fade-right"
-      className="flex flex-col gap-3 w-8/12 border-4 transition-colors group hover:border-blue-900  border-blue-600 rounded-md px-5 py-6"
+      className="flex flex-col gap-3 max-sm:w-full w-8/12 border-4 transition-colors group hover:border-blue-900  border-blue-600 rounded-md px-5 py-6"
     >
       <div className="flex justify-between items-center gap-5">
         <h1 className="font-bold text-xl"> {title} </h1>

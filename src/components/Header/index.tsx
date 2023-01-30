@@ -7,7 +7,7 @@ export function Header() {
       // className="not-sr-only"
       className="fixed bg-stone-900 container z-20"
     >
-      <NavigationMenu.Root className="w-full">
+      <NavigationMenu.Root className="w-full max-sm:hidden">
         <NavigationMenu.List className="flex w-full gap-5 px-10 py-5 justify-between items-center">
           <div className="flex gap-5 items-center">
             <NavigationItem href="#home">Logo</NavigationItem>
