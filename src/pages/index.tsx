@@ -43,7 +43,7 @@ export default function Home({ repoTags }: HomeProps) {
           className="flex justify-end max-sm:justify-center max-sm:items-center max-sm:mr-0 mr-10"
         >
           <Image
-            className="rounded-xl ring-4 ring-offset-4 ring-offset-stone-900"
+            className="rounded-xl ring-4 ring-offset-4 mt-10 ring-offset-stone-900"
             width={250}
             height={500}
             src={"/Perfil.jpg"}

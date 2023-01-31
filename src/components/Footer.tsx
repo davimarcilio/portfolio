@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Envelope,
   GithubLogo,
@@ -18,32 +19,32 @@ export const Footer = () => {
             <p className="mr-1 text-gray-100 transition-colors group-hover:text-gray-300">
               <Phone size={24} />
             </p>
-            <a
+            <span
               aria-label="Our phone"
               title="Our phone"
               className="transition-colors duration-300 text-gray-100 group-hover:text-gray-300"
             >
               +55 48 9 9125-6373
-            </a>
+            </span>
           </div>
           <div className="flex items-center gap-2 group">
             <p className="mr-1 text-gray-100 group-hover:text-gray-300">
               <Envelope size={24} />
             </p>
-            <a
+            <Link
               href="mailto:davimarcilio.js@gmail.com"
               aria-label="Our email"
               title="Our email"
               className="transition-colors duration-300 text-gray-100 group-hover:text-gray-300"
             >
               davimarcilio.js@gmail.com
-            </a>
+            </Link>
           </div>
           <div className="flex items-center gap-2 group group-hover:text-gray-300">
             <p className="mr-1 text-gray-100">
               <MapPin size={24} />
             </p>
-            <a
+            <Link
               href="https://www.google.com/maps"
               target="_blank"
               rel="noopener noreferrer"
@@ -52,7 +53,7 @@ export const Footer = () => {
               className="transition-colors duration-300 text-gray-100 group-hover:text-gray-300"
             >
               Criciúma, Santa Catarina
-            </a>
+            </Link>
           </div>
         </div>
         <div>
@@ -60,19 +61,21 @@ export const Footer = () => {
             Social
           </span>
           <div className="flex items-center mt-1 space-x-3">
-            <a
+            <Link
+              target={"_blank"}
               href="https://github.com/davimarcilio"
               className="text-gray-500 hover:text-gray-200 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <GithubLogo weight="fill" size={24} />
-            </a>
+            </Link>
 
-            <a
+            <Link
+              target={"_blank"}
               href="https://www.linkedin.com/in/davi-marcilio-89a694240/"
               className="text-gray-500 hover:text-gray-200 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <LinkedinLogo weight="fill" size={24} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
