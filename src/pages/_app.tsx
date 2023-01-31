@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${inter.className} font-inter text-slate-50 container mx-auto px-5`}
+      className={`${inter.className} font-inter text-slate-50 container mx-auto relative px-5`}
     >
       <Component {...pageProps} />
     </main>

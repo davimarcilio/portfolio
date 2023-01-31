@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header
       // className="not-sr-only"
-      className="fixed bg-stone-900 container max-sm:left-0 z-20"
+      className="fixed bg-stone-900 w-full left-0 max-sm:left-0 z-20"
     >
       <NavigationMenu.Root className="w-full max-sm:hidden">
         <NavigationMenu.List className="flex w-full gap-5 px-10 py-5 shadow-2xl justify-between items-center">

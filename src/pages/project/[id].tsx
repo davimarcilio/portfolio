@@ -37,8 +37,7 @@ export default function Project({
             onClick={() => router.back()}
             className="absolute max-sm:top-5 left-5 cursor-pointer"
           >
-            {" "}
-            <ArrowBendUpLeft size={50} />{" "}
+            <ArrowBendUpLeft size={50} />
           </button>
           <h1 className="text-4xl font-bold"> {title} </h1>
         </div>
