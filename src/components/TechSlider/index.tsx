@@ -19,7 +19,7 @@ export function TechSlider({ repoTags }: TechSliderProps) {
   return (
     <div
       ref={ref}
-      className="keen-slider text-xs font-bold w-full  overflow-hidden"
+      className="keen-slider text-xs font-bold w-full self-start  overflow-hidden"
     >
       {repoTags.length > 0 &&
         repoTags.map((tag) => {
