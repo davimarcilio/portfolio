@@ -3,6 +3,7 @@ import { NavigationItem } from "./components/NavigationItem";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { List, Plus } from "phosphor-react";
 import Link from "next/link";
+import Image from "next/image";
 export function Header() {
   return (
     <header
@@ -12,7 +13,9 @@ export function Header() {
       <NavigationMenu.Root className="w-full max-sm:hidden">
         <NavigationMenu.List className="flex w-full gap-5 px-10 py-5 shadow-2xl justify-between items-center">
           <div className="flex gap-5 items-center ">
-            <NavigationItem href="#home">Logo</NavigationItem>
+            <NavigationItem href="#home">
+              <Image src={"/Logo.svg"} alt="DM" width={24} height={24} />
+            </NavigationItem>
             <NavigationItem href="#home">Home</NavigationItem>
             <NavigationItem href="#about">Sobre</NavigationItem>
             <NavigationItem href="#stacks">Stacks</NavigationItem>

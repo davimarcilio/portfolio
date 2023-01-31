@@ -24,6 +24,48 @@ export default function Document() {
           property="og:description"
           content="JavaScript, TypeScript Full Stack Developer"
         />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          media="(prefers-color-scheme: dark)"
+          href="/icon/dark/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          media="(prefers-color-scheme: dark)"
+          href="/icon/dark/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          media="(prefers-color-scheme: dark)"
+          href="/icon/dark/favicon-16x16.png"
+        />
+        <link rel="manifest" href="icon/dark/site.webmanifest" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          media="(prefers-color-scheme: light)"
+          href="/icon/light/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          media="(prefers-color-scheme: light)"
+          href="/icon/light/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          media="(prefers-color-scheme: light)"
+          href="/icon/light/favicon-16x16.png"
+        />
+        <link rel="manifest" href="icon/light/site.webmanifest" />
       </Head>
       <body className="bg-stone-900">
         <Main />
