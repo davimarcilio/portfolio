@@ -36,42 +36,46 @@ export function Header() {
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
           <DropdownMenu.Content className="text-gray-100 font-inter w-screen bg-neutral-800 px-6 py-3 flex flex-col gap-5 shadow-2xl">
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#home"
-            >
-              Logo
-            </Link>
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#home"
-            >
-              Home
-            </Link>
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#about"
-            >
-              Sobre
-            </Link>
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#stacks"
-            >
-              Stacks
-            </Link>
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#experience"
-            >
-              Experiência
-            </Link>
-            <Link
-              className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
-              href="#projects"
-            >
-              Projetos
-            </Link>
+            <DropdownMenu.Item asChild>
+              <Link
+                className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
+                href="#home"
+              >
+                Home
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
+                href="#about"
+              >
+                Sobre
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
+                href="#stacks"
+              >
+                Stacks
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
+                href="#experience"
+              >
+                Experiência
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"
+                href="#projects"
+              >
+                Projetos
+              </Link>
+            </DropdownMenu.Item>
             <button className="bg-sky-700 px-6 w-full py-2 rounded-md transition-colors flex justify-center items-center gap-2 hover:bg-sky-900 font-bold text-xl">
               <Plus size={22} weight="bold" />
               Conectar
