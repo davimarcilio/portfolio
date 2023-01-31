@@ -68,7 +68,13 @@ export function ProjectsSection({ repoTags }: ProjectsSectionProps) {
             )[0]
             .slice(1);
 
-          return <Project repoTags={correctRepoTag} project={project} />;
+          return (
+            <Project
+              key={project.id}
+              repoTags={correctRepoTag}
+              project={project}
+            />
+          );
         })}
         <Link
           target={"_blank"}

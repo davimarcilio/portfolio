@@ -23,7 +23,7 @@ export function TechSlider({ repoTags }: TechSliderProps) {
     >
       {repoTags.length > 0 &&
         repoTags.map((tag) => {
-          return <TechItem> {tag} </TechItem>;
+          return <TechItem key={tag}> {tag} </TechItem>;
         })}
     </div>
   );

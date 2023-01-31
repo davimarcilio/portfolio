@@ -239,6 +239,7 @@ export default function Home({ repoTags }: HomeProps) {
         <div className="grid grid-cols-4 max-sm:grid-cols-2 max-sm:gap-10 gap-20 m-5 ">
           {Stacks.map((stack) => (
             <StackCard
+              key={stack.src}
               description={stack.description}
               src={stack.src}
               alt={stack.alt}
