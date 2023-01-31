@@ -8,12 +8,20 @@ import { StackCard } from "@/components/StackCard";
 import { Stacks } from "@/data/Stacks";
 import { At, DownloadSimple, MapPin } from "phosphor-react";
 import { Header } from "@/components/Header";
-import { ProjectsSection } from "@/components/Section";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import { EducationCard } from "@/components/EducationCard";
 import Lottie from "lottie-react";
 import searchJob from "../anim/searchJob.json";
 import { Footer } from "@/components/Footer";
-export default function Home() {
+import { GetServerSideProps, GetStaticProps } from "next";
+import { Projects } from "@/data/Projects";
+import { Octokit } from "octokit";
+
+interface HomeProps {
+  repoTags: string[][];
+}
+
+export default function Home({ repoTags }: HomeProps) {
   useEffect(() => {
     aos.init({ duration: 2000 });
   }, []);
@@ -319,9 +327,32 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ProjectsSection />
+      <ProjectsSection repoTags={repoTags} />
 
       <Footer />
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const allRepos = Projects.map((project) =>
+    project.repoUrl.slice(project.repoUrl.indexOf("/", 8))
+  );
+  const octokit = new Octokit({
+    auth: process.env.GITHUBKEY,
+  });
+  const allResponses = await Promise.all(
+    allRepos.map(async (repo: string): Promise<string[]> => {
+      const topics = octokit
+        .request(`GET /repos${repo}`)
+        .then((response) => [repo, ...response.data.topics]);
+      return topics;
+    })
+  );
+
+  return {
+    props: {
+      repoTags: allResponses,
+    },
+  };
+};

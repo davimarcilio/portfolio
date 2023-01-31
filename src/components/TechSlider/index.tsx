@@ -1,7 +1,12 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { TechItem } from "./components/TechItem";
-export function TechSlider() {
+
+interface TechSliderProps {
+  repoTags: string[];
+}
+
+export function TechSlider({ repoTags }: TechSliderProps) {
   const [ref] = useKeenSlider<HTMLDivElement>({
     mode: "free",
 
@@ -10,16 +15,16 @@ export function TechSlider() {
       spacing: 10,
     },
   });
+
   return (
     <div
       ref={ref}
       className="keen-slider text-xs font-bold w-full  overflow-hidden"
     >
-      <TechItem>TypeScript</TechItem>
-      <TechItem>Node</TechItem>
-      <TechItem>React</TechItem>
-      <TechItem>JavaScript</TechItem>
-      <TechItem>TypeScript</TechItem>
+      {repoTags.length > 0 &&
+        repoTags.map((tag) => {
+          return <TechItem> {tag} </TechItem>;
+        })}
     </div>
   );
 }

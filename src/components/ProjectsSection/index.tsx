@@ -1,9 +1,11 @@
 import { Projects } from "@/data/Projects";
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Plus } from "phosphor-react";
 import { ChangeEvent, useEffect, useState } from "react";
-import { TechSlider } from "./TechSlider";
+import { TechSlider } from "../TechSlider";
+import { Project } from "./components/Project";
 
 // interface SectionProps {
 //   children: ReactNode;
@@ -21,7 +23,11 @@ import { TechSlider } from "./TechSlider";
 //   deployUrl: string;
 // }
 
-export function ProjectsSection() {
+interface ProjectsSectionProps {
+  repoTags: string[][];
+}
+
+export function ProjectsSection({ repoTags }: ProjectsSectionProps) {
   const [search, setSearch] = useState("");
   const [ProjectsFiltered, setProjectsFiltered] = useState(Projects);
 
@@ -53,26 +59,17 @@ export function ProjectsSection() {
         className="w-full px-10 py-3 placeholder:text-xl flex items-center bg-transparent border text-gray-300 focus:outline-none transition-colors focus:border-sky-400 border-blue-800 rounded-lg"
       />
       <div className="grid grid-cols-3 max-sm:grid-cols-1 justify-center items-center gap-10">
-        {ProjectsFiltered.map((project) => (
-          <Link
-            data-aos="fade-up"
-            key={project.id}
-            href={`/project/${project.id}`}
-            className="bg-neutral-800 flex flex-col p-5 group hover:bg-neutral-900 rounded-lg transition-all cursor-pointer"
-          >
-            <Image
-              width={500}
-              height={500}
-              src={project.imageUrl}
-              alt="Projeto"
-              className="group-hover:opacity-70 w-96 h-56 transition-all  "
-            />
-            <TechSlider />
-            <h1 className="text-xl group-hover:text-gray-200 font-bold mt-5 transition-all">
-              {project.title}
-            </h1>
-          </Link>
-        ))}
+        {ProjectsFiltered.map((project) => {
+          const correctRepoTag: string[] = repoTags
+            .filter((repoTag) =>
+              repoTag[0].includes(
+                project.repoUrl.slice(project.repoUrl.indexOf("/", 8))
+              )
+            )[0]
+            .slice(1);
+
+          return <Project repoTags={correctRepoTag} project={project} />;
+        })}
         <Link
           target={"_blank"}
           data-aos="fade-up"
@@ -89,3 +86,14 @@ export function ProjectsSection() {
     </section>
   );
 }
+
+// const getStaticProps: GetStaticProps = ()=>{
+
+//   axios.get("")
+
+//   return {
+//     props: {
+
+//     }
+//   }
+// }
