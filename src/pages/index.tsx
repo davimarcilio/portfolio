@@ -16,6 +16,7 @@ import { Footer } from "@/components/Footer";
 import { GetStaticProps } from "next";
 import { Projects } from "@/data/Projects";
 import { Octokit } from "octokit";
+import Head from "next/head";
 
 interface HomeProps {
   repoTags: string[][];
@@ -28,6 +29,9 @@ export default function Home({ repoTags }: HomeProps) {
 
   return (
     <>
+      <Head>
+        <title>Davi Marcilio</title>
+      </Head>
       <Header />
 
       <section

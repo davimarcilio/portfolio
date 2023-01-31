@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header
       // className="not-sr-only"
-      className="fixed bg-stone-900 container z-20"
+      className="fixed bg-stone-900 container max-sm:left-0 z-20"
     >
       <NavigationMenu.Root className="w-full max-sm:hidden">
         <NavigationMenu.List className="flex w-full gap-5 px-10 py-5 shadow-2xl justify-between items-center">
@@ -31,11 +31,14 @@ export function Header() {
         </NavigationMenu.List>
       </NavigationMenu.Root>
       <DropdownMenu.Root>
-        <DropdownMenu.Trigger className="bg-stone-900 py-1 hidden max-sm:flex focus:outline-none">
+        <DropdownMenu.Trigger className="bg-stone-900 py-1 hidden max-sm:px-5 max-sm:flex focus:outline-none">
           <List size={50} />
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="text-gray-100 font-inter w-screen bg-neutral-800 px-6 py-3 flex flex-col gap-5 shadow-2xl">
+          <DropdownMenu.Content
+            data-aos="slide-right"
+            className="text-gray-100 font-inter w-screen bg-neutral-800 px-6 py-3 flex flex-col gap-5 shadow-2xl"
+          >
             <DropdownMenu.Item asChild>
               <Link
                 className="list-none border-b-4 border-t-4 border-transparent p-2 hover:cursor-pointer hover:border-b-cyan-500 font-bold text-xl"

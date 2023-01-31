@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        <title>Davi Marcilio</title>
         <meta
           property="og:title"
           content="Davi Marcilio - Full-Stack Developer"
