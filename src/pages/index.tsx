@@ -68,13 +68,16 @@ export default function Home({ repoTags }: HomeProps) {
           </h1>
           <Link
             data-aos="fade-left"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 hover:text-gray-300 transition-colors"
             href={"mailto:davimarcilio.js@gmail.com"}
           >
             <At size={24} weight="fill" />
             davimarcilio.js@gmail.com
           </Link>
-          <span data-aos="fade-left" className="flex items-center gap-2">
+          <span
+            data-aos="fade-left"
+            className="flex items-center gap-2 hover:text-gray-300 transition-colors"
+          >
             <MapPin size={24} weight="fill" />
             Criciúma, Santa Catarina
           </span>
@@ -321,7 +324,7 @@ export default function Home({ repoTags }: HomeProps) {
             </h1>
             <Lottie
               data-aos="fade-down"
-              className="w-8/12  relative bg-blue-600 rounded-3xl after:rounded-3xl after:content-[''] after:absolute after:top-0 after:w-20 after:right-0 after:h-full after:bg-blue-600 before:content-[''] before:rounded-3xl before:absolute before:top-0 before:z-10 before:w-20 before:left-0 before:h-full before:bg-blue-600"
+              className="w-8/12 relative bg-blue-600 rounded-3xl after:rounded-3xl after:content-[''] after:absolute after:top-0 after:w-20 after:right-0 after:h-full after:bg-blue-600 before:content-[''] before:rounded-3xl before:absolute before:top-0 before:z-10 before:w-20 before:left-0 before:h-full before:bg-blue-600"
               animationData={searchJob}
             />
           </div>
