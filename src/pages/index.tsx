@@ -13,7 +13,7 @@ import { EducationCard } from "@/components/EducationCard";
 import Lottie from "lottie-react";
 import searchJob from "../anim/searchJob.json";
 import { Footer } from "@/components/Footer";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { Projects } from "@/data/Projects";
 import { Octokit } from "octokit";
 
@@ -334,7 +334,7 @@ export default function Home({ repoTags }: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const allRepos = Projects.map((project) =>
     project.repoUrl.slice(project.repoUrl.indexOf("/", 8))
   );
@@ -354,5 +354,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       repoTags: allResponses,
     },
+    revalidate: 60 * 60 * 24,
   };
 };
