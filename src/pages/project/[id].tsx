@@ -27,10 +27,10 @@ export default function Project({
   const router = useRouter();
   return (
     <div className="w-full flex min-h-screen flex-col justify-center gap-5 items-center relative my-5 ">
-      <div className="relative w-full flex justify-center items-center">
+      <div className="relative w-full max-sm:static flex justify-center items-center">
         <button
           onClick={() => router.back()}
-          className="absolute left-5 cursor-pointer"
+          className="absolute max-sm:top-5 left-5 cursor-pointer"
         >
           {" "}
           <ArrowBendUpLeft size={50} />{" "}
@@ -39,14 +39,14 @@ export default function Project({
       </div>
       {isMedia ? (
         <iframe
-          className="w-full h-2/3 bg-transparent"
+          className="w-full max-sm:h-full h-2/3 bg-transparent"
           src={mediaUrl}
           title="E-Commerce ignite"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       ) : (
         <Image
-          className="w-10/12 h-10/12"
+          className="w-10/12 max-sm:w-full max-sm:h-full h-10/12"
           alt={title}
           height={1000}
           width={1000}
@@ -55,7 +55,7 @@ export default function Project({
       )}
 
       <p className="text-xl">{description}</p>
-      <div className="flex gap-5">
+      <div className="flex max-sm:flex-col gap-5">
         {deployUrl && (
           <Link
             className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
