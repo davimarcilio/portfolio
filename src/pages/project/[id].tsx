@@ -34,7 +34,7 @@ export default function Project({
       <div className="w-full flex min-h-screen flex-col justify-center gap-5 items-center relative my-5 ">
         <div className="relative w-full max-sm:static flex justify-center items-center">
           <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/#projects")}
             className="absolute max-sm:top-5 left-5 cursor-pointer"
           >
             <ArrowBendUpLeft size={50} />
