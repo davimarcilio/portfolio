@@ -1,5 +1,5 @@
 import { Projects } from "@/data/Projects";
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,10 +83,20 @@ export default function Project({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<
-  any,
-  { id: string }
-> = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = Projects.map((project) => ({
+    params: { id: String(project.id) },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
+  params,
+}) => {
   const id = Number(params?.id);
 
   const project = Projects.filter((project) => project.id === id)[0];
