@@ -305,7 +305,7 @@ export default function Home({ repoTags }: HomeProps) {
 
             <EducationCard
               company="YouTube/Fóruns"
-              description="Git, GitHub, GitHub para times, RegEx, CleanCode, etc..."
+              description="Consumo conteúdo sobre programação diariamente, sempre atento as novidades do mundo da tecnologia."
               time="2021 - Inf"
               title="Outros"
               key={89231}
