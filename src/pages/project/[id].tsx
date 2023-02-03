@@ -62,6 +62,7 @@ export default function Project({
         <div className="flex max-sm:flex-col gap-5">
           {deployUrl && (
             <Link
+              target={"_blank"}
               className="bg-sky-700 hover:bg-sky-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
               href={deployUrl}
             >
@@ -71,6 +72,7 @@ export default function Project({
           )}
 
           <Link
+            target={"_blank"}
             className="bg-blue-700 hover:bg-blue-800 transition-colors px-10 py-3 font-bold text-xl rounded-md flex items-center gap-5 justify-center"
             href={repoUrl}
           >

@@ -17,7 +17,7 @@ export const Projects = [
     isMedia: false,
     imageUrl: "/project/coffeDelivery.gif",
     repoUrl: "https://github.com/davimarcilio/CoffeeDelivery",
-    deployUrl: "davimarcilio.github.io/CoffeeDelivery/",
+    deployUrl: "https://davimarcilio.github.io/CoffeeDelivery/",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const Projects = [
     isMedia: false,
     imageUrl: "/project/igniteTimer.gif",
     repoUrl: "https://github.com/davimarcilio/igniteTimer",
-    deployUrl: "davimarcilio.github.io/igniteTimer/",
+    deployUrl: "https://davimarcilio.github.io/igniteTimer/",
   },
   {
     id: 3,
