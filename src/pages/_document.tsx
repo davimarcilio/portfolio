@@ -11,7 +11,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://uploaddeimagens.com.br/imagens/LNyMsEA"
+          content="https://uploaddeimagens.com.br/images/004/328/774/full/Screenshot_51.png?1675453186"
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
