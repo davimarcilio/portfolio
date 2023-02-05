@@ -88,7 +88,7 @@ export default function Home({ repoTags }: HomeProps) {
           <Link
             data-aos="fade-up"
             href={
-              "https://cdn.discordapp.com/attachments/468214793199943690/1071789424133816350/Davi-Marcilio-Curriculo.pdf"
+              "https://cdn.discordapp.com/attachments/468214793199943690/1071826578402713651/Curriculo-Davi-Marcilio.pdf"
             }
             className="bg-sky-700 px-6 py-2 rounded-md transition-colors hover:bg-sky-900 font-bold text-xl w-fit flex items-center gap-2"
           >
