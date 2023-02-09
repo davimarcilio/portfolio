@@ -11,8 +11,8 @@ export default function Document() {
         />
         <meta property="og:image" content="/OgImage.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="980" />
-        <meta property="og:image:height" content="490" />
+        <meta property="og:image:width" content="1919" />
+        <meta property="og:image:height" content="962" />
         <meta
           property="og:image:alt"
           content="Davi Marcilio - Full Stack Developer"
